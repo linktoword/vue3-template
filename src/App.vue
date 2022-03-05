@@ -4,11 +4,16 @@
 import HelloWorld from './components/HelloWorld.vue'
 import { useUserStore } from './store/module/user'
 const userStore = useUserStore()
+
+function demo() {
+	ElMessage.error('1111111111111111')
+}
 </script>
 
 <template>
 	<img alt="Vue logo" src="./assets/logo.png" />
 	<HelloWorld msg="Hello Vue 3 + Vite" />
+	<el-button type="success" @click="demo">Success</el-button>
 </template>
 
 <style>

@@ -3,7 +3,7 @@
  * @Author: zsf
  * @Date: 2022-03-05 09:27:43
  * @LastEditors: zsf
- * @LastEditTime: 2022-03-05 10:51:36
+ * @LastEditTime: 2022-03-05 11:26:12
  */
 module.exports = {
 	root: true, // 当前配置为根配置，将不再从上级文件夹查找配置
@@ -18,6 +18,10 @@ module.exports = {
 		parser: '@babel/eslint-parser',
 		requireConfigFile: false,
 		sourceType: 'module'
+	},
+	globals: {
+		// 忽略全局未定义的变量
+		ElMessage: true
 	},
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 只有开发环境可以使用console
