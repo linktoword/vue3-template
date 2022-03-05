@@ -3,7 +3,7 @@
  * @Author: zsf
  * @Date: 2022-03-05 09:27:43
  * @LastEditors: zsf
- * @LastEditTime: 2022-03-05 10:11:35
+ * @LastEditTime: 2022-03-05 10:51:36
  */
 module.exports = {
 	root: true, // 当前配置为根配置，将不再从上级文件夹查找配置
@@ -22,13 +22,7 @@ module.exports = {
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 只有开发环境可以使用console
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off', // 只有开发环境可以使用debugger
-		'no-unused-vars': [
-			2,
-			{
-				vars: 'all',
-				args: 'none'
-			}
-		],
+		'no-unused-vars': 0,
 		'vue/html-closing-bracket-newline': 'off', // html右括号在新的一行
 		'arrow-spacing': ['warn', { before: true, after: true }], // 箭头间距
 		'no-const-assign': 2 // 不能修改使用const关键字声明的变量
